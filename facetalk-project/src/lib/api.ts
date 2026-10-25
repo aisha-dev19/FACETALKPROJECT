@@ -1,8 +1,8 @@
 // While developing, the server runs on port 5000. Once deployed, requests go to
 // the same address as the page, and vercel.json forwards /api/... to the server.
-const API_URL =
-  import.meta.env.VITE_API_URL ??
-  (import.meta.env.DEV ? "http://localhost:5000" : "");
+const API_URL = import.meta.env.DEV
+  ? (import.meta.env.VITE_API_URL ?? "http://localhost:5000")
+  : "";
 
 export class ApiError extends Error {
   status: number;
