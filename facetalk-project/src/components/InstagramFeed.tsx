@@ -1,21 +1,25 @@
-import salonVideo from "../assets/videos/facetalksalon.mov";
+import facetalkSalon from "../assets/videos/facetalksalon.mp4";
+import imagenails from "../assets/videos/imagenails.mp4";
+import salon from "../assets/videos/salon.mp4";
 import { FiInstagram, FiPlay } from "react-icons/fi";
+
+const videos = [facetalkSalon, imagenails, salon, facetalkSalon, imagenails];
 
 function InstagramFeed() {
   return (
     <section className="px-6 py-20">
       <div className="mx-auto  min-h-[620px]">
         <div className="mt-10 grid grid-cols-2 gap-3 md:grid-cols-5">
-          {[1, 2, 3, 4, 5].map((video) => (
+          {videos.map((videoSrc, index) => (
             <a
-              key={video}
+              key={`${videoSrc}-${index}`}
               href="https://www.instagram.com/facetalksalons?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw=="
               target="_blank"
               rel="noopener noreferrer"
               className="group relative block aspect-[9/16] overflow-hidden rounded-md"
             >
               <video
-                src={salonVideo}
+                src={videoSrc}
                 className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 autoPlay
                 muted

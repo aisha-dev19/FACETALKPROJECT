@@ -1,5 +1,5 @@
-import salonVideo from "../assets/videos/salon.mov";
-import imagenails from "../assets/videos/imagenails.mov";
+import salonVideo from "../assets/videos/salon.mp4";
+import imagenails from "../assets/videos/imagenails.mp4";
 import { Link } from "react-router-dom";
 import { FiArrowRight } from "react-icons/fi";
 
@@ -17,7 +17,7 @@ function Home() {
             playsInline
             aria-hidden="true"
           >
-            <source src={imagenails} />
+            <source src={imagenails} type="video/mp4" />
           </video>
 
           {/* Dark overlay so the text stays readable */}
@@ -57,7 +57,7 @@ function Home() {
             playsInline
             aria-hidden="true"
           >
-            <source src={salonVideo} />
+            <source src={salonVideo} type="video/mp4" />
           </video>
         </div>
       </section>
