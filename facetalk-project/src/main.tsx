@@ -4,6 +4,8 @@ import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 import App from "./App.tsx";
 import AuthProvider from "./context/AuthProvider";
+import "@fontsource/poppins/400.css";
+import "@fontsource/poppins/600.css";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
